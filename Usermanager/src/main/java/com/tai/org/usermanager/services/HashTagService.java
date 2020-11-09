@@ -124,7 +124,7 @@ public class HashTagService implements IHashTagService {
 		
 		Map<Integer, Long> map = listHashTag.stream().collect(Collectors.toMap(TagUserTotal::getHashTagId, TagUserTotal::getMaxUser));
 		
-		Set<Integer> set = map.keySet();
+		Set<Integer> set = map.keySet();  //Lấy danh sách các key
         for (int key : set) {
             HashTagDTO dto = new HashTagDTO();
             dto.setId(key);
